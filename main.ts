@@ -1,3 +1,11 @@
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    Plane.destroy(effects.halo, 500)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    fuel.destroy(effects.spray, 500)
+})
+let fuel: Sprite = null
+let Plane: Sprite = null
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -120,7 +128,7 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
-let Plane = sprites.create(img`
+Plane = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     f . . . . . . . . . . . . . . . 
     f f . . . . . . . . . . . . . . 
@@ -140,7 +148,7 @@ let Plane = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(Plane, 100, 100)
 Plane.setPosition(10, 22)
-let myEnemy = sprites.create(img`
+let Thunder_cloud = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . f f f f f f f f . . . . . 
@@ -158,4 +166,25 @@ let myEnemy = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Projectile)
-myEnemy.setPosition(140, 49)
+Thunder_cloud.setPosition(140, 49)
+Thunder_cloud.follow(Plane, 50)
+fuel = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . f f f f . . . . . . . . 
+    . . . . f f f f . . . . . . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Food)
+fuel.setVelocity(50, 50)
+fuel.setBounceOnWall(true)
