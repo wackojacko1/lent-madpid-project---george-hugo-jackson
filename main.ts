@@ -120,10 +120,6 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
-for (let index = 0; index < 4; index++) {
-    music.setVolume(33)
-    music.jumpUp.playUntilDone()
-}
 let Plane = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     f . . . . . . . . . . . . . . . 
@@ -144,7 +140,7 @@ let Plane = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(Plane, 100, 100)
 Plane.setPosition(10, 22)
-let Thunder_cloud = sprites.create(img`
+let myEnemy = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . f f f f f f f f . . . . . 
@@ -162,5 +158,4 @@ let Thunder_cloud = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Projectile)
-Thunder_cloud.setPosition(140, 49)
-Thunder_cloud.follow(Plane)
+myEnemy.setPosition(140, 49)

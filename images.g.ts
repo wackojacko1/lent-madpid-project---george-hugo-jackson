@@ -1,4 +1,9 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="{ON.0el1L:uMP784SNi%">Player</variable><variable type="KIND_SpriteKind" id="9Ax4R5ZkyP9R=8(5[!At">Projectile</variable><variable type="KIND_SpriteKind" id="}/l~+E4+wg-2wCHog#mv">Food</variable><variable type="KIND_SpriteKind" id="6-/Q2FGaL0i1c*5]I+*{">Enemy</variable><variable id=",65Kb2YQ-b99p%n,b:Jw">value</variable><variable id="d-a8_lV3vMLTwTQCN]Fz">list</variable><variable id="{A,AY]|$/e]`d%?eJj=r">Plane</variable><variable id="+)~i[KnUgbe@QzRkWMrQ">Thunder cloud</variable><variable id="Rx-FL)C(ZJ+Kbd9^I=Z)">mySprite</variable><variable id=":FVcX/OwYAe.AMcf_nyM">myEnemy</variable></variables><block type="pxt-on-start" id="r6m2N4|lj]YW,OPuTPBu" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundimage" id="mJ$.*o/:PQ:{ye433x%y"><value name="img"><shadow type="background_image_picker" id="g*/I~wefB}maw(DE#Ptl"><field name="img">img`
+// Auto-generated code. Do not edit.
+namespace myImages {
+
+    helpers._registerFactory("image", function(name: string) {
+        switch(helpers.stringTrim(name)) {
+            case "image1":return img`
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -119,7 +124,8 @@ d77777777777777777777dddddddddddd77777dddddddddddddddd99999999999ddddddddddddddd
 7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
 7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
 7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
-`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow></value><next><block type="variables_set" id="^djquYE99`9LKELQAwf)"><field name="VAR" id="{A,AY]|$/e]`d%?eJj=r">Plane</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="9fS~I]{+:W(~pEp~qcO6"><value name="img"><shadow type="screen_image_picker" id="{tbY+0|LgDiiTVND2TLT"><field name="img">img`
+`;
+            case "image2":return img`
 . . . . . . . . . . . . . . . . 
 f . . . . . . . . . . . . . . . 
 f f . . . . . . . . . . . . . . 
@@ -136,7 +142,8 @@ f f f f f f f f f f f f . . . .
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image2"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="NtoaEp,W3R/yH*#H-Y!*"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="wr.=g7tr=wKYK)up`X`G"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="];-}YW^Ayp6SPKl:o?m4"><field name="VAR" id="{A,AY]|$/e]`d%?eJj=r">Plane</field></block></value><value name="vx"><shadow type="math_number" id="w?o#.2weoZAn}b$,i6T."><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number" id=")9=Nex2xmc/OcG.CWEQ#"><field name="NUM">100</field></shadow></value><next><block type="spritesetpos" id="3Es`5eU%3xTJxdS2MT5)"><value name="sprite"><block type="variables_get" id="?XB(P))l{j]7U4*45;11"><field name="VAR" id="{A,AY]|$/e]`d%?eJj=r">Plane</field></block></value><value name="x"><shadow type="positionPicker" id="$]gr{mSHhLfc9ADugIbS"><field name="index">10</field></shadow></value><value name="y"><shadow type="positionPicker" id="v^V2tnaOKu!fjK4Qt,v^"><field name="index">22</field></shadow></value><next><block type="variables_set" id="Bo~[]j*A/o9N]xoKq^$k"><field name="VAR" id=":FVcX/OwYAe.AMcf_nyM">myEnemy</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="B:SgSnn]W33WtOsg^[gY"><value name="img"><shadow type="screen_image_picker" id="rkY7`.G8j[Kr6s~|YEKu"><field name="img">img`
+`;
+            case "image3":return img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . f f f f f f f f . . . . . 
@@ -153,4 +160,17 @@ f f f f f f f f f f f f . . . .
 . . . . . . . 5 . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image3"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="UpL`8?Rkg}iECe=PX#9j"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="spritesetpos" id="r)=}uJ_$w7OGnSYnb:AY"><value name="sprite"><block type="variables_get" id="+WA^d6vFIv3x3p-|QKZr"><field name="VAR" id=":FVcX/OwYAe.AMcf_nyM">myEnemy</field></block></value><value name="x"><shadow type="positionPicker" id="jJ4-2^MNC|iHL;1w,?{u"><field name="index">140</field></shadow></value><value name="y"><shadow type="positionPicker" id="1hkmM=~}~N35K?U;)TwG"><field name="index">49</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
+`;
+        }
+        return null;
+    })
+
+    helpers._registerFactory("animation", function(name: string) {
+        switch(helpers.stringTrim(name)) {
+
+        }
+        return null;
+    })
+
+}
+// Auto-generated code. Do not edit.
