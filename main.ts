@@ -1,8 +1,17 @@
+sprites.onDestroyed(SpriteKind.Food, function (sprite) {
+    info.changeScoreBy(1)
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
     Plane.destroy(effects.halo, 500)
 })
+info.onLifeZero(function () {
+    game.reset()
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     fuel.destroy(effects.spray, 500)
+})
+sprites.onDestroyed(SpriteKind.Player, function (sprite) {
+    info.changeLifeBy(-1)
 })
 let fuel: Sprite = null
 let Plane: Sprite = null
@@ -128,6 +137,8 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
+info.setLife(1)
+info.setScore(0)
 Plane = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     f . . . . . . . . . . . . . . . 
@@ -188,3 +199,5 @@ fuel = sprites.create(img`
     `, SpriteKind.Food)
 fuel.setVelocity(50, 50)
 fuel.setBounceOnWall(true)
+Plane.setBounceOnWall(true)
+Thunder_cloud.setBounceOnWall(true)
