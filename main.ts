@@ -1,17 +1,12 @@
-sprites.onDestroyed(SpriteKind.Food, function (sprite) {
-    info.changeScoreBy(1)
-})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
     Plane.destroy(effects.halo, 500)
-})
-info.onLifeZero(function () {
-    game.reset()
+    music.wawawawaa.playUntilDone()
+    info.changeLifeBy(-1)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     fuel.destroy(effects.spray, 500)
-})
-sprites.onDestroyed(SpriteKind.Player, function (sprite) {
-    info.changeLifeBy(-1)
+    music.baDing.play()
+    info.changeScoreBy(1)
 })
 let fuel: Sprite = null
 let Plane: Sprite = null
